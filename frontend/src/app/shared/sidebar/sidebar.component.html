@@ -1,10 +1,42 @@
 <aside class="container">
-  <ul class="container__list">
-      <li class="container__list__item">
-          <button class="container__list__item__button">
-              Adicionar veículos
+    <button class="container__button">
+        <fa-icon [icon]="faBars"></fa-icon>
+    </button>
+    <a class="container__logo" href=""></a>
+    <ul class="container__list">
+        <li class="container__list__item">
+            <div class="container__list__item__input-group">
+                <input class="container__list__item__input-group__input" type="number" placeholder="Buscar ID">
+                <button class="container__list__item__input-group__button">
+                    <fa-icon [icon]="faSearch"></fa-icon>
+                </button>
+            </div>
+        </li>
+        <li class="container__list__item">
+            <button class="container__list__item__button">
+                Listar veículos
             </button>
-      </li>
+        </li>
+        <li class="container__list__item">
+            <button class="container__list__item__button">
+                Adicionar veículos
+            </button>
+        </li>
+        <li class="container__list__item">
+            <button class="container__list__item__button">
+                Editar veículos
+            </button>
+        </li>
+        <li class="container__list__item">
+            <button class="container__list__item__button">
+                Deletar veículos
+            </button>
+        </li>
+        <li class="container__list__item--ultimo">
+            <button class="container__list__item__button">
+                Sobre
+            </button>
+        </li>
+    </ul>
 
-  </ul>
 </aside>
