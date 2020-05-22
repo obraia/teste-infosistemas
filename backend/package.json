@@ -1,0 +1,25 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Sistema de gestão de veículos",
+  "main": "index.js",
+  "repository": "https://github.com/obraia/teste-infosistemas",
+  "author": "Bryan Diniz (obraia)",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "dotenv": "^8.2.0",
+    "mocha": "^7.1.2",
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "start": "",
+    "dev": "nodemon src/index.js",
+    "test": "mocha ./test/**/*.js"
+  }
+}
