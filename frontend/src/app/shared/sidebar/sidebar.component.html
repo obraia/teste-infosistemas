@@ -6,7 +6,7 @@
     <ul class="container__list">
         <li class="container__list__item">
             <div class="container__list__item__input-group">
-                <input class="container__list__item__input-group__input" type="number" placeholder="Buscar ID" #id_pesquisa>
+                <input class="container__list__item__input-group__input" type="number" placeholder="Buscar ID" (keyup.enter)="searchById(id_pesquisa.value)" #id_pesquisa>
                 <button class="container__list__item__input-group__button" (click)="searchById(id_pesquisa.value)">
                     <fa-icon [icon]="faSearch"></fa-icon>
                 </button>
@@ -33,5 +33,4 @@
             </button>
         </li>
     </ul>
-
 </aside>

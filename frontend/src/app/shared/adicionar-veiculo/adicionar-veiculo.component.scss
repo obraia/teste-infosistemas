@@ -1,3 +1,7 @@
+$main-color: #2d3a80;
+$main-color-hover: #4e5999;
+$text-color-dark: #3a3a3a;
+
 .container {
     width: calc(100vw - 250px);
     min-height: 100vh;
@@ -10,7 +14,7 @@
         margin: 20px 0;
         text-transform: uppercase;
         font-weight: lighter;
-        color: #2d3a80;
+        color: $main-color;
     }
 
     &__form{
@@ -20,7 +24,7 @@
         align-items: center;
         padding: 10px;
         background-color: #e4e4e4;
-        border-bottom: 4px solid #2d3a80;
+        border-bottom: 4px solid $main-color;
 
         &__group-group{
             display: flex;
@@ -43,8 +47,8 @@
                 align-items: center;
                 padding: 5px 20px;
                 background-color: #ffffff;
-                border-left: 4px solid #2d3a80;
-                color: #3a3a3a;
+                border-left: 4px solid $main-color;
+                color: $text-color-dark;
                 cursor: pointer;
             }
 
@@ -53,7 +57,7 @@
                 height: 45px;
                 padding: 0 10px;
                 border-left: 1px solid #e4e4e4;
-                color: #3a3a3a;
+                color: $text-color-dark;
                 font-size: 18px;
             }
         }
@@ -63,18 +67,18 @@
             margin-top: 15px;
             margin-bottom: 10px;
             padding: 15px 40px;
-            background-color: #2d3a80;
+            background-color: $main-color;
             font-size: 18px;
             color: #fff;
 
             &:hover{
                 transition: .2s;
-                background-color: #4e5999;
+                background-color: $main-color-hover;
             }
 
             &:active{
                 transition: .2s;
-                background-color: #3e4777;
+                background-color: $main-color;
                 box-shadow: 1px 1px 3px 1px #00000060;
             }
         }

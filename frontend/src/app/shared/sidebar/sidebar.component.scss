@@ -1,3 +1,6 @@
+$main-color: #2d3a80;
+$text-color-dark: #3a3a3a;
+
 .container {
     transition: .4s;
     width: 250px;
@@ -18,13 +21,13 @@
         height: 40px;
         border-radius: 5px;
         background-color: #d6d6d6;
-        color: #3a3a3a;
+        color: $text-color-dark;
         font-size: 22px;
 
         &:hover {
             transition: 0.2s;
             background-color: #ececec;
-            color: #2d3a80;
+            color: $main-color;
         }
 
         &:active{
@@ -38,7 +41,7 @@
         height: 150px;
         border-radius: 75px;
         margin: 15px 0;
-        background-color: #2d3a80;
+        background-color: $main-color;
     }
 
     &__list {
@@ -60,15 +63,15 @@
                 width: 100%;
                 height: 50px;
                 background-color: #d6d6d6;
-                color: #3a3a3a;
+                color: $text-color-dark;
                 font-size: 16px;
-                font-weight: lighter;
+                font-weight: 400;
 
                 &:hover {
                     transition: 0.2s;
-                    border-left: 4px solid #2d3a80;
+                    border-left: 4px solid $main-color;
                     background-color: #ececec;
-                    color: #2d3a80;
+                    color: $main-color;
                 }
 
                 &:active {
@@ -90,7 +93,7 @@
                     border: none;
                     border-top-left-radius: 5px;
                     border-bottom-left-radius: 5px;
-                    color: #3a3a3a;
+                    color: $text-color-dark;
                 }
 
                 &__button {
@@ -99,12 +102,12 @@
                     border-top-right-radius: 5px;
                     border-bottom-right-radius: 5px;
                     background-color: #d6d6d6;
-                    color: #3a3a3a;
+                    color: $text-color-dark;
 
                     &:hover {
                         transition: 0.2s;
                         background-color: #ececec;
-                        color: #2d3a80;
+                        color: $main-color;
                     }
                 }
             }

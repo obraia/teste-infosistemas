@@ -1,3 +1,6 @@
+$main-color: #2d3a80;
+$text-color-dark: #3a3a3a;
+
 .container {
     width: calc(100vw - 250px);
     height: 100vh;
@@ -6,21 +9,21 @@
     padding: 45px;
 
     &__title {
-        color: #2d3a80;
+        color: $main-color;
         margin-bottom: 25px;
     }
 
     &__subtitle {
         font-weight: normal;
         margin-bottom: 15px;
-        color: #3a3a3a;
+        color: $text-color-dark;
     }
 
     &__text{
         font-size: 18px;
         font-weight: 400;
         margin-bottom: 25px;
-        color: #3a3a3a;
+        color: $text-color-dark;
     }
 
     &__links{
