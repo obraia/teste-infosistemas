@@ -50,7 +50,7 @@ const VeiculoController = {
 
         await Arquivo.deletarVeiculo(id);
 
-        return response.status(200).send({ message: 'veículo deletado com sucesso' });
+        return response.status(200).send({ message: `${veiculoPesquisa.placa} deletado com sucesso` });
     }
 }
 

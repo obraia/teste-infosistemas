@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import {environment} from '../../environments/environment';
 
 import { Veiculo } from '../models/veiculo';
 
@@ -9,7 +10,7 @@ import { Veiculo } from '../models/veiculo';
 })
 export class ApiService {
 
-  url: string = 'http://localhost:3333'
+  url: string =  environment.API;
 
   constructor(private http: HttpClient) { }
 

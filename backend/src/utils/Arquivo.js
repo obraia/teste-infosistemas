@@ -62,7 +62,7 @@ const Arquivo = {
         const index = veiculos.findIndex(v => v.id == id);
 
         if (index >= 0) {
-            veiculos.splice(index);
+            veiculos.splice(index, 1);
             this.salvarArquivo(veiculos);
         } else {
             console.log('[Arquivo] id não encontrado');
