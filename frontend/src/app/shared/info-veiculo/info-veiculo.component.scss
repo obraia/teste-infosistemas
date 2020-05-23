@@ -13,7 +13,7 @@
         color: #2d3a80;
     }
 
-    &__placa{
+    &__placa {
         width: 300px;
         height: 100px;
         background-color: #fff;
@@ -21,7 +21,7 @@
         border: 3px solid #3a3a3a;
         overflow: hidden;
 
-        &__local{
+        &__local {
             height: 25px;
             display: flex;
             justify-content: center;
@@ -33,7 +33,7 @@
             text-transform: uppercase;
         }
 
-        &__identificador{
+        &__identificador {
             height: 70px;
             display: flex;
             justify-content: center;
@@ -45,21 +45,42 @@
         }
     }
 
-    &__spec{
+    &__spec {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-top: 15px;
         color: #3a3a3a;
 
-        &__tittle{
+        &__tittle {
             font-weight: normal;
         }
 
-        &__value{
+        &__value {
             padding: 5px 10px;
-            background-color: #fff;  
-            border: 1px solid #ccc;    
+            background-color: #fff;
+            border: 1px solid #ccc;
+        }
+    }
+
+    &__button {
+        transition: 0.2s;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        padding: 15px 40px;
+        background-color: #d82626;
+        font-size: 18px;
+        color: #fff;
+
+        &:hover {
+            transition: 0.2s;
+            background-color: #d34b4b;
+        }
+
+        &:active {
+            transition: 0.2s;
+            background-color: #d33737;
+            box-shadow: 1px 1px 3px 1px #00000060;
         }
     }
 }
@@ -74,7 +95,7 @@
     .container {
         padding: 15px 10px;
 
-        &__title{
+        &__title {
             font-size: 20px;
         }
     }

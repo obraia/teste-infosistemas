@@ -1,6 +1,7 @@
 import { OnInit, Component } from '@angular/core';
 import { faBars, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { Router } from '@angular/router';
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
     selector: 'app-sidebar',
@@ -12,23 +13,37 @@ export class SidebarComponent implements OnInit {
     faBars = faBars;
     faSearch = faSearch;
 
-    constructor(private router: Router) {
-
+    constructor(private api: ApiService, private router: Router) {
     }
 
     ngOnInit(): void {
-
     }
 
-    goToListaVeiculos(){
+    searchById(id) {
+        this.router.navigateByUrl('/limbo');
+
+        if (id) {
+            this.api.getVeiculoById(id)
+                .subscribe(
+                    response => this.router.navigateByUrl('/info-veiculo', { state: response }),
+                    error => this.router.navigateByUrl('/info-veiculo', { state: error.error.data })
+                );
+        }
+    }
+
+    goToListaVeiculos() {
         this.router.navigateByUrl('/lista-veiculos');
     }
 
-    goToAdicionarVeiculo(){
+    goToAdicionarVeiculo() {
         this.router.navigateByUrl('/adicionar-veiculo');
     }
 
-    goToEditarVeiculo(){
+    goToEditarVeiculo() {
         this.router.navigateByUrl('/editar-veiculo');
+    }
+
+    goToSobre() {
+        this.router.navigateByUrl('/sobre');
     }
 }

@@ -1,7 +1,7 @@
 import { OnInit, Component } from '@angular/core';
 import { } from '@fortawesome/free-solid-svg-icons';
 import { ApiService } from '../../services/api.service';
-import { Veiculo } from '../../models/veiculo.iterface';
+import { Veiculo } from '../../models/veiculo';
 import { Router } from '@angular/router';
 
 @Component({
@@ -16,13 +16,13 @@ export class ListaVeiculosComponent implements OnInit {
   constructor(private api: ApiService, private router: Router) { }
 
   ngOnInit(): void {
-    this.api.getData('/veiculos')
+    this.api.getVeiculos()
       .subscribe(response => {
         this.veiculos = response;
       });
   }
 
   goToVeiculoInfo(veiculo: Veiculo) {
-    this.router.navigateByUrl('/info-veiculo', { state: veiculo });
+    this.router.navigateByUrl('/info-veiculo', { state: veiculo, replaceUrl: true });
   }
 }

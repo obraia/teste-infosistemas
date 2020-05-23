@@ -1,4 +1,4 @@
-<div class="container">
+<div *ngIf="veiculo.placa != null" class="container">
     <h1 class="container__title">{{veiculo.modelo}}</h1>
     <div class="container__placa">
         <div class="container__placa__local">Brasil </div>
@@ -20,4 +20,7 @@
         <h1 class="container__spec__tittle">Ano</h1>
         <span class="container__spec__value">{{veiculo.ano}}</span>
     </div>
+    <button *ngIf="veiculo.placa != 'ERR-404'" class="container__button" (click)="deletarVeiculo()">
+        deletar
+    </button>
 </div>

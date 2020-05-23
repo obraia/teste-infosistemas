@@ -1,39 +1,47 @@
 <div class="container" action="">
     <h1 class="container__title">Adicionar veículo</h1>
 
-    <form class="container__form">
+    <form class="container__form" [formGroup]="formVeiculo" (ngSubmit)="onSubmit()">
         <div class="container__form__group-group">
             <div class="container__form__input-group container__form__input-group--menor">
                 <label class="container__form__input-group__label" for="placa">Placa</label>
-                <input class="container__form__input-group__input" type="text" mask="SSS-0000" id="placa">
+                <input class="container__form__input-group__input" type="text" mask="SSS-0000" id="placa"
+                    formControlName="placa">
             </div>
             <div class="container__form__input-group">
                 <label class="container__form__input-group__label" for="chassi">Chassi</label>
-                <input class="container__form__input-group__input" type="text" mask="AAA AAAAAA AA AAAAAA" id="chassi">
+                <input class="container__form__input-group__input" type="text" mask="AAA AAAAAA AA AAAAAA"
+                    id="chassi" formControlName="chassi">
             </div>
         </div>
 
         <div class="container__form__input-group">
             <label class="container__form__input-group__label" for="renavam">RENAVAM</label>
-            <input class="container__form__input-group__input" type="text" mask="00000000000" id="renavam">
+            <input class="container__form__input-group__input" type="text" mask="00000000000" id="renavam"
+                formControlName="renavam">
         </div>
 
         <div class="container__form__input-group">
             <label class="container__form__input-group__label" for="modelo">Modelo</label>
-            <input class="container__form__input-group__input" type="text" name="" id="modelo">
+            <input class="container__form__input-group__input" type="text" name="" id="modelo"
+                formControlName="modelo">
         </div>
 
         <div class="container__form__group-group">
             <div class="container__form__input-group">
                 <label class="container__form__input-group__label" for="marca">Marca</label>
-                <input class="container__form__input-group__input" type="text" name="" id="marca">
+                <input class="container__form__input-group__input" type="text" name="" id="marca"
+                    formControlName="marca">
             </div>
             <div class="container__form__input-group container__form__input-group--menor">
                 <label class="container__form__input-group__label" for="ano">Ano</label>
-                <input class="container__form__input-group__input" type="text" mask="0000" id="ano">
+                <input class="container__form__input-group__input" type="text" mask="0000" id="ano"
+                    formControlName="ano">
             </div>
         </div>
 
-        <button class="container__form__button">Adicionar</button>
+        <button class="container__form__button">
+            Adicionar
+        </button>
     </form>
 </div>

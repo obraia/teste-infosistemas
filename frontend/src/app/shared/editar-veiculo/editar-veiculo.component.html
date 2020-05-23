@@ -1,39 +1,54 @@
-<div class="container">
+<div class="container" action="">
     <h1 class="container__title">Editar veículo</h1>
 
-    <form class="container__form">
+    <form class="container__form" [formGroup]="formVeiculo" (ngSubmit)="onSubmit()">
+
+        <select class="container__form__select" (change)="setVeiculo($event.target.value)" formControlName="id">
+            <option *ngFor="let veiculo of veiculos" value={{veiculo.id}}>
+                {{veiculo.id + " - " + veiculo.modelo + " - " + veiculo.marca}}
+            </option>
+        </select>
+
         <div class="container__form__group-group">
             <div class="container__form__input-group container__form__input-group--menor">
                 <label class="container__form__input-group__label" for="placa">Placa</label>
-                <input class="container__form__input-group__input" type="text" id="placa" value="{{veiculo.placa}}">
+                <input class="container__form__input-group__input" type="text" mask="SSS-0000" id="placa"
+                    formControlName="placa">
             </div>
             <div class="container__form__input-group">
                 <label class="container__form__input-group__label" for="chassi">Chassi</label>
-                <input class="container__form__input-group__input" type="text" id="chassi" value="{{veiculo.chassi}}">
+                <input class="container__form__input-group__input" type="text" mask="AAA AAAAAA AA AAAAAA"
+                    id="chassi" formControlName="chassi">
             </div>
         </div>
 
         <div class="container__form__input-group">
             <label class="container__form__input-group__label" for="renavam">RENAVAM</label>
-            <input class="container__form__input-group__input" type="text" id="renavam" value="{{veiculo.renavam}}">
+            <input class="container__form__input-group__input" type="text" mask="00000000000" id="renavam"
+                formControlName="renavam">
         </div>
 
         <div class="container__form__input-group">
             <label class="container__form__input-group__label" for="modelo">Modelo</label>
-            <input class="container__form__input-group__input" type="text" name="" id="modelo" value="{{veiculo.modelo}}">
+            <input class="container__form__input-group__input" type="text" name="" id="modelo"
+                formControlName="modelo">
         </div>
 
         <div class="container__form__group-group">
             <div class="container__form__input-group">
                 <label class="container__form__input-group__label" for="marca">Marca</label>
-                <input class="container__form__input-group__input" type="text" name="" id="marca" value="{{veiculo.marca}}">
+                <input class="container__form__input-group__input" type="text" name="" id="marca"
+                    formControlName="marca">
             </div>
             <div class="container__form__input-group container__form__input-group--menor">
                 <label class="container__form__input-group__label" for="ano">Ano</label>
-                <input class="container__form__input-group__input" type="text" id="ano" value="{{veiculo.ano}}">
+                <input class="container__form__input-group__input" type="text" mask="0000" id="ano"
+                    formControlName="ano">
             </div>
         </div>
 
-        <button class="container__form__button">Editar</button>
+        <button class="container__form__button">
+            Editar
+        </button>
     </form>
 </div>

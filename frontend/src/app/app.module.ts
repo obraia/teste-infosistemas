@@ -14,6 +14,10 @@ import { EditarVeiculoComponent } from './shared/editar-veiculo/editar-veiculo.c
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { NgxMaskModule, IConfig } from 'ngx-mask';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HomeComponent } from './shared/home/home.component';
+import { LimboComponent } from './shared/limbo/limbo.component';
+import { SobreComponent } from './shared/sobre/sobre.component';
  
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -28,6 +32,9 @@ const maskConfig: Partial<IConfig> = {
     AdicionarVeiculoComponent,
     EditarVeiculoComponent,
     InfoVeiculoComponent,
+    HomeComponent,
+    LimboComponent,
+    SobreComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +42,7 @@ const maskConfig: Partial<IConfig> = {
     HttpClientModule,
     FontAwesomeModule,
     NgxMaskModule.forRoot(maskConfig),
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
