@@ -47,6 +47,10 @@ export class SidebarComponent implements OnInit {
         }
     }
 
+    goToHome() {
+        this.router.navigateByUrl('/');
+    }
+
     goToListaVeiculos() {
         this.router.navigateByUrl('/lista-veiculos');
     }

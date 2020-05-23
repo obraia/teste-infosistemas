@@ -10,6 +10,7 @@ $text-color-dark: #3a3a3a;
     flex-direction: column;
     align-items: center;
     background-color: #e4e4e4;
+    z-index: 2;
 
     &__button {
         display: none;
@@ -38,9 +39,15 @@ $text-color-dark: #3a3a3a;
     &__logo {
         width: 150px;
         height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         border-radius: 75px;
         margin: 15px 0;
         background-color: $main-color;
+        color: #fff;
+        font-size: 80px;
+        font-weight: bold;
     }
 
     &__list {
