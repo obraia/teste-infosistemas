@@ -5,7 +5,6 @@ $text-color-dark: #3a3a3a;
     transition: .4s;
     width: 250px;
     min-height: 100vh;
-    left: 0;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -112,6 +111,23 @@ $text-color-dark: #3a3a3a;
                 }
             }
         }
+    }
+}
+
+.container--opened{
+    transition: .4s;
+    left: 0 !important;
+}
+
+.container--closed{
+    transition: .4s;
+    left: -250px !important;
+}
+
+@media only screen and (min-width: 801px) {
+    .container {
+        transition: .4s;
+        left: 0 !important;
     }
 }
 

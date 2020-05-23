@@ -10,6 +10,7 @@ import { ApiService } from 'src/app/services/api.service';
 })
 export class SidebarComponent implements OnInit {
 
+    isOpen: boolean;
     faBars = faBars;
     faSearch = faSearch;
 
@@ -17,6 +18,21 @@ export class SidebarComponent implements OnInit {
     }
 
     ngOnInit(): void {
+        this.isOpen = false;
+    }
+
+    toggleMenu(isOpen: boolean) {
+        const sidebar = document.getElementById('side-bar');
+
+        if (isOpen) {
+            sidebar.classList.remove('container--closed');
+            sidebar.classList.add('container--opened');
+        } else {
+            sidebar.classList.remove('container--opened');
+            sidebar.classList.add('container--closed');    
+        }
+
+        this.isOpen = isOpen;
     }
 
     searchById(id) {
