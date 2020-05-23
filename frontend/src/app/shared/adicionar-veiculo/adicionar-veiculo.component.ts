@@ -13,6 +13,7 @@ import { Veiculo } from 'src/app/models/veiculo';
 export class AdicionarVeiculoComponent implements OnInit {
 
     formVeiculo: FormGroup;
+    isFormValid: Boolean;
 
     constructor(private apiService: ApiService, private formBuilder: FormBuilder) {
     }
@@ -33,10 +34,14 @@ export class AdicionarVeiculoComponent implements OnInit {
     }
 
     onSubmit() {
-        this.apiService.adicionarVeiculo(this.formVeiculo.value)
-            .subscribe(response => {
-                alert(response.message)
-                this.formVeiculo.reset(new Veiculo());
-            });
+        if (this.formVeiculo.valid) {
+            this.apiService.adicionarVeiculo(this.formVeiculo.value)
+                .subscribe(response => {
+                    alert(response.message)
+                    this.formVeiculo.reset(new Veiculo());
+                });
+        }else{
+            alert('O formulário não foi preenchido de forma válida');
+        }
     }
 }

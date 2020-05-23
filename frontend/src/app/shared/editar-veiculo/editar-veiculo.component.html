@@ -13,41 +13,41 @@
             <div class="container__form__input-group container__form__input-group--menor">
                 <label class="container__form__input-group__label" for="placa">Placa</label>
                 <input class="container__form__input-group__input" type="text" mask="SSS-0000" id="placa"
-                    formControlName="placa">
+                    formControlName="placa" required minlength="7">
             </div>
             <div class="container__form__input-group">
                 <label class="container__form__input-group__label" for="chassi">Chassi</label>
-                <input class="container__form__input-group__input" type="text" mask="AAA AAAAAA AA AAAAAA"
-                    id="chassi" formControlName="chassi">
+                <input class="container__form__input-group__input" type="text" mask="AAA AAAAAA AA AAAAAA" id="chassi"
+                    formControlName="chassi" required minlength="17">
             </div>
         </div>
 
         <div class="container__form__input-group">
             <label class="container__form__input-group__label" for="renavam">RENAVAM</label>
             <input class="container__form__input-group__input" type="text" mask="00000000000" id="renavam"
-                formControlName="renavam">
+                formControlName="renavam" required minlength="11">
         </div>
 
         <div class="container__form__input-group">
             <label class="container__form__input-group__label" for="modelo">Modelo</label>
-            <input class="container__form__input-group__input" type="text" name="" id="modelo"
-                formControlName="modelo">
+            <input class="container__form__input-group__input" type="text" name="" id="modelo" formControlName="modelo"
+                required minlength="2">
         </div>
 
         <div class="container__form__group-group">
             <div class="container__form__input-group">
                 <label class="container__form__input-group__label" for="marca">Marca</label>
                 <input class="container__form__input-group__input" type="text" name="" id="marca"
-                    formControlName="marca">
+                    formControlName="marca" required minlength="2">
             </div>
             <div class="container__form__input-group container__form__input-group--menor">
                 <label class="container__form__input-group__label" for="ano">Ano</label>
                 <input class="container__form__input-group__input" type="text" mask="0000" id="ano"
-                    formControlName="ano">
+                    formControlName="ano" required minlength="4">
             </div>
         </div>
 
-        <button class="container__form__button">
+        <button class="container__form__button" [disabled]="!formVeiculo.valid">
             Editar
         </button>
     </form>

@@ -1,5 +1,6 @@
 $main-color: #2d3a80;
 $main-color-hover: #4e5999;
+$main-color-disabled: #9ea6d3;
 $text-color-dark: #3a3a3a;
 
 .container {
@@ -80,6 +81,11 @@ $text-color-dark: #3a3a3a;
                 transition: .2s;
                 background-color: $main-color;
                 box-shadow: 1px 1px 3px 1px #00000060;
+            }
+
+            &:disabled{
+                background-color: $main-color-disabled;
+                cursor: not-allowed;
             }
         }
     }

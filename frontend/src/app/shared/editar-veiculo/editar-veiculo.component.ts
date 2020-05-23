@@ -50,11 +50,15 @@ export class EditarVeiculoComponent implements OnInit {
     }
 
     onSubmit() {
-        this.apiService.editarVeiculo(this.formVeiculo.value)
-            .subscribe(response => {
-                alert(response.message)
-                this.formVeiculo.reset(new Veiculo());
-                this.getVeiculos();
-            });
+        if (this.formVeiculo.valid) {
+            this.apiService.editarVeiculo(this.formVeiculo.value)
+                .subscribe(response => {
+                    alert(response.message)
+                    this.formVeiculo.reset(new Veiculo());
+                    this.getVeiculos();
+                });
+        } else {
+            alert('O formulário não foi preenchido de forma válida');
+        }
     }
 }
