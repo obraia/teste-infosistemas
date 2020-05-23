@@ -2,6 +2,21 @@
     display: flex;
 
     &__content{
+        display: flex;
         width: 100%;
+    }
+
+    &__sidebar{
+        // position: absolute;
+        
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .container {
+        &__sidebar{
+            transition: .4s;
+            width: 0px;
+        }
     }
 }

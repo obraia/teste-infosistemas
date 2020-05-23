@@ -2,140 +2,29 @@
     <h1 class="principal__title">Veículos cadastrados</h1>
 
     <div class="container">
-        <table class="container__table">
-            <!-- id, placa, chassi, renavam, modelo, marca, ano -->
+        <table class="container__table" *ngIf="veiculos != null">
             <thead class="container__table__head">
                 <tr class="container__table__head__row">
                     <th class="container__table__head__row__column">Id</th>
                     <th class="container__table__head__row__column">Placa</th>
                     <th class="container__table__head__row__column">Chassi</th>
                     <th class="container__table__head__row__column">RENAVAM</th>
-                    <th class="container__table__head__row__column">modelo</th>
-                    <th class="container__table__head__row__column">marca</th>
-                    <th class="container__table__head__row__column">ano</th>
+                    <th class="container__table__head__row__column">Modelo</th>
+                    <th class="container__table__head__row__column">Marca</th>
+                    <th class="container__table__head__row__column">Ano</th>
                 </tr>
             </thead>
             <tbody class="container__table__body">
-                <!-- 1;HHO-6008;1RV 524T98 88 S92605;98447225015;Del Rey Belina GL;Ford;1987 -->
-                <tr class="container__table__body__row">
-                    <td class="container__table__body__row__column">001</td>
-                    <td class="container__table__body__row__column">HHO-6008</td>
-                    <td class="container__table__body__row__column">1RV 524T98 88 S92605</td>
-                    <td class="container__table__body__row__column">98447225015</td>
-                    <td class="container__table__body__row__column">Del Rey Belina GL</td>
-                    <td class="container__table__body__row__column">Ford</td>
-                    <td class="container__table__body__row__column">1987</td>
+                <tr class="container__table__body__row" *ngFor="let veiculo of veiculos" (click)="goToVeiculoInfo(veiculo)">
+                    <td class="container__table__body__row__column">{{veiculo.id}}</td>
+                    <td class="container__table__body__row__column">{{veiculo.placa}}</td>
+                    <td class="container__table__body__row__column">{{veiculo.chassi}}</td>
+                    <td class="container__table__body__row__column">{{veiculo.renavam}}</td>
+                    <td class="container__table__body__row__column">{{veiculo.modelo}}</td>
+                    <td class="container__table__body__row__column">{{veiculo.marca}}</td>
+                    <td class="container__table__body__row__column">{{veiculo.ano}}</td>
                 </tr>
-
-                <tr class="container__table__body__row">
-                    <td class="container__table__body__row__column">001</td>
-                    <td class="container__table__body__row__column">HHO-6008</td>
-                    <td class="container__table__body__row__column">1RV 524T98 88 S92605</td>
-                    <td class="container__table__body__row__column">98447225015</td>
-                    <td class="container__table__body__row__column">Del Rey Belina GL</td>
-                    <td class="container__table__body__row__column">Ford</td>
-                    <td class="container__table__body__row__column">1987</td>
-                </tr>
-
-                <tr class="container__table__body__row">
-                    <td class="container__table__body__row__column">001</td>
-                    <td class="container__table__body__row__column">HHO-6008</td>
-                    <td class="container__table__body__row__column">1RV 524T98 88 S92605</td>
-                    <td class="container__table__body__row__column">98447225015</td>
-                    <td class="container__table__body__row__column">Del Rey Belina GL</td>
-                    <td class="container__table__body__row__column">Ford</td>
-                    <td class="container__table__body__row__column">1987</td>
-                </tr>
-
-                <tr class="container__table__body__row">
-                    <td class="container__table__body__row__column">001</td>
-                    <td class="container__table__body__row__column">HHO-6008</td>
-                    <td class="container__table__body__row__column">1RV 524T98 88 S92605</td>
-                    <td class="container__table__body__row__column">98447225015</td>
-                    <td class="container__table__body__row__column">Del Rey Belina GL</td>
-                    <td class="container__table__body__row__column">Ford</td>
-                    <td class="container__table__body__row__column">1987</td>
-                </tr>
-                <tr class="container__table__body__row">
-                    <td class="container__table__body__row__column">001</td>
-                    <td class="container__table__body__row__column">HHO-6008</td>
-                    <td class="container__table__body__row__column">1RV 524T98 88 S92605</td>
-                    <td class="container__table__body__row__column">98447225015</td>
-                    <td class="container__table__body__row__column">Del Rey Belina GL</td>
-                    <td class="container__table__body__row__column">Ford</td>
-                    <td class="container__table__body__row__column">1987</td>
-                </tr>
-
-                <tr class="container__table__body__row">
-                    <td class="container__table__body__row__column">001</td>
-                    <td class="container__table__body__row__column">HHO-6008</td>
-                    <td class="container__table__body__row__column">1RV 524T98 88 S92605</td>
-                    <td class="container__table__body__row__column">98447225015</td>
-                    <td class="container__table__body__row__column">Del Rey Belina GL</td>
-                    <td class="container__table__body__row__column">Ford</td>
-                    <td class="container__table__body__row__column">1987</td>
-                </tr>
-                <tr class="container__table__body__row">
-                    <td class="container__table__body__row__column">001</td>
-                    <td class="container__table__body__row__column">HHO-6008</td>
-                    <td class="container__table__body__row__column">1RV 524T98 88 S92605</td>
-                    <td class="container__table__body__row__column">98447225015</td>
-                    <td class="container__table__body__row__column">Del Rey Belina GL</td>
-                    <td class="container__table__body__row__column">Ford</td>
-                    <td class="container__table__body__row__column">1987</td>
-                </tr>
-
-                <tr class="container__table__body__row">
-                    <td class="container__table__body__row__column">001</td>
-                    <td class="container__table__body__row__column">HHO-6008</td>
-                    <td class="container__table__body__row__column">1RV 524T98 88 S92605</td>
-                    <td class="container__table__body__row__column">98447225015</td>
-                    <td class="container__table__body__row__column">Del Rey Belina GL</td>
-                    <td class="container__table__body__row__column">Ford</td>
-                    <td class="container__table__body__row__column">1987</td>
-                </tr>
-
-                <tr class="container__table__body__row">
-                    <td class="container__table__body__row__column">001</td>
-                    <td class="container__table__body__row__column">HHO-6008</td>
-                    <td class="container__table__body__row__column">1RV 524T98 88 S92605</td>
-                    <td class="container__table__body__row__column">98447225015</td>
-                    <td class="container__table__body__row__column">Del Rey Belina GL</td>
-                    <td class="container__table__body__row__column">Ford</td>
-                    <td class="container__table__body__row__column">1987</td>
-                </tr>
-
-                <tr class="container__table__body__row">
-                    <td class="container__table__body__row__column">001</td>
-                    <td class="container__table__body__row__column">HHO-6008</td>
-                    <td class="container__table__body__row__column">1RV 524T98 88 S92605</td>
-                    <td class="container__table__body__row__column">98447225015</td>
-                    <td class="container__table__body__row__column">Del Rey Belina GL</td>
-                    <td class="container__table__body__row__column">Ford</td>
-                    <td class="container__table__body__row__column">1987</td>
-                </tr>
-                <tr class="container__table__body__row">
-                    <td class="container__table__body__row__column">001</td>
-                    <td class="container__table__body__row__column">HHO-6008</td>
-                    <td class="container__table__body__row__column">1RV 524T98 88 S92605</td>
-                    <td class="container__table__body__row__column">98447225015</td>
-                    <td class="container__table__body__row__column">Del Rey Belina GL</td>
-                    <td class="container__table__body__row__column">Ford</td>
-                    <td class="container__table__body__row__column">1987</td>
-                </tr>
-
-                <tr class="container__table__body__row">
-                    <td class="container__table__body__row__column">001</td>
-                    <td class="container__table__body__row__column">HHO-6008</td>
-                    <td class="container__table__body__row__column">1RV 524T98 88 S92605</td>
-                    <td class="container__table__body__row__column">98447225015</td>
-                    <td class="container__table__body__row__column">Del Rey Belina GL</td>
-                    <td class="container__table__body__row__column">Ford</td>
-                    <td class="container__table__body__row__column">1987</td>
-                </tr>
-
             </tbody>
         </table>
     </div>
-
 </section>

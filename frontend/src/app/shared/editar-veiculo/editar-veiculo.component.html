@@ -1,0 +1,39 @@
+<div class="container">
+    <h1 class="container__title">Editar veículo</h1>
+
+    <form class="container__form">
+        <div class="container__form__group-group">
+            <div class="container__form__input-group container__form__input-group--menor">
+                <label class="container__form__input-group__label" for="placa">Placa</label>
+                <input class="container__form__input-group__input" type="text" id="placa" value="{{veiculo.placa}}">
+            </div>
+            <div class="container__form__input-group">
+                <label class="container__form__input-group__label" for="chassi">Chassi</label>
+                <input class="container__form__input-group__input" type="text" id="chassi" value="{{veiculo.chassi}}">
+            </div>
+        </div>
+
+        <div class="container__form__input-group">
+            <label class="container__form__input-group__label" for="renavam">RENAVAM</label>
+            <input class="container__form__input-group__input" type="text" id="renavam" value="{{veiculo.renavam}}">
+        </div>
+
+        <div class="container__form__input-group">
+            <label class="container__form__input-group__label" for="modelo">Modelo</label>
+            <input class="container__form__input-group__input" type="text" name="" id="modelo" value="{{veiculo.modelo}}">
+        </div>
+
+        <div class="container__form__group-group">
+            <div class="container__form__input-group">
+                <label class="container__form__input-group__label" for="marca">Marca</label>
+                <input class="container__form__input-group__input" type="text" name="" id="marca" value="{{veiculo.marca}}">
+            </div>
+            <div class="container__form__input-group container__form__input-group--menor">
+                <label class="container__form__input-group__label" for="ano">Ano</label>
+                <input class="container__form__input-group__input" type="text" id="ano" value="{{veiculo.ano}}">
+            </div>
+        </div>
+
+        <button class="container__form__button">Editar</button>
+    </form>
+</div>
