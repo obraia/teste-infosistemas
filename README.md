@@ -35,4 +35,5 @@ O frontend foi criado em AngularJS usando SCSS para a estilização, seguindo a 
 Já o backend foi feito com NodeJs + Express, não foi utilizado um banco de dados nesse desafio, logo os dados são salvos em um aquivo de texto comum.
 Ele tem a seguinte estrutura de arquivos e pastas:
 
+<img src="https://raw.githubusercontent.com/obraia/teste-infosistemas/master/screenshots/backend.jpg"/>
 
